@@ -1,0 +1,37 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = "ProgramaCatalogo"
+
+run {
+    standardInput = System.in
+}
+
+apply plugin: 'java-library'
+
+test {
+    //useJUnitPlatform()
+    useTestNG()
+}
+
+//dependencies {
+//    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
+//    testImplementation 'junit:junit:4.13'
+//}
+
+
+
+//sourceCompatibility = "1.7"
+//targetCompatibility = "1.7"
+
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'org.testng:testng:6.9.6'
+    implementation 'org.testng:testng:6.9.6'
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
